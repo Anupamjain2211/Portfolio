@@ -9,7 +9,6 @@ import { RiReactjsLine } from "react-icons/ri";
 import { FaNodeJs } from "react-icons/fa";
 import { ReactTyped } from "react-typed";
 import pic from "../../public/photo.avif";
- 
 
 const Home = () => {
   return (
@@ -39,14 +38,17 @@ const Home = () => {
             </p>
             <br />
             {/*social */}
-            <div className="flex justify-between">
-              <div className="space-y-2">
-                <h1 className="font-bold">Available On</h1>
+            <div className="flex flex-col items-center md:flex-row justify-between space-y-6 md:space-y-0">
+              <div className="space-y-2 ">
+                <h1 className=" text-center font-bold">Available On</h1>
 
                 <ul className="flex space-x-5">
                   <li>
-                    <FaLinkedin className="text-2xl cursor-pointer" />
+                    <a href="https://www.facebook.com/" target="blank">
+                      <FaLinkedin className="text-2xl cursor-pointer" />
+                    </a>
                   </li>
+
                   <li>
                     <FaSkype className="text-2xl cursor-pointer" />
                   </li>
@@ -59,11 +61,11 @@ const Home = () => {
                 </ul>
               </div>
               <div className="space-y-2">
-                <h1 className="font-bold">Currently Working On</h1>
+                <h1 className=" text-center font-bold">Currently Working On</h1>
 
                 <ul className="flex space-x-5">
                   <li>
-                    <DiMongodb className="text-xl md:text-2xl hover:scale-110 duration-200 rounded-full" />
+                    <DiMongodb className="ml-2.5 md:ml-0 text-3xl md:text-2xl hover:scale-110 duration-200 rounded-full" />
                   </li>
                   <li>
                     <SiExpress className="text-xl md:text-2xl hover:scale-110 duration-200 rounded-full" />
@@ -79,10 +81,16 @@ const Home = () => {
             </div>
           </div>
           <div className="md:w-1/2 md:ml-48 md:mt-16 mt-8 order-1">
-            <img src={pic} className="rounded-full md:h-[450px] md:w-[450px]" alt="" />
+            <img
+              src={pic}
+              className="rounded-full md:h-[450px] md:w-[450px]"
+              alt=""
+            />
           </div>
         </div>
       </div>
+      <hr style={{ border: '1px solid black' }} />
+      
     </>
   );
 };
