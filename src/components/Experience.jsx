@@ -1,11 +1,11 @@
 import React from "react";
 import html from "../../public/html.png";
 import css from "../../public/css.png";
-import java from "../../public/java.png";
+import mongo from "../../public/mongo.png";
 import javascript from "../../public/javascript.png";
-import oracle from "../../public/oracle.png";
-import spring from "../../public/spring.png";
-import springBoot from "../../public/springBoot.jpg";
+import sql from "../../public/sql.png";
+import noode from "../../public/noode.png";
+import react from "../../public/react.png";
 
 const Experience = () => {
   const cardItems = [
@@ -21,32 +21,36 @@ const Experience = () => {
     },
     {
       id: 1,
-      logo: java,
-      name: "Java",
-    },
-    {
-      id: 1,
       logo: javascript,
       name: "Javascript",
     },
     {
       id: 1,
-      logo: oracle,
-      name: "Oracle",
+      logo: mongo,
+      name: "Mongo DB",
+    },
+
+    {
+      id: 1,
+      logo: sql,
+      name: "Sql",
     },
     {
       id: 1,
-      logo: spring,
-      name: "Spring",
+      logo: noode,
+      name: "Node",
     },
     {
       id: 1,
-      logo: springBoot,
-      name: "Spring Boot",
+      logo: react,
+      name: "React",
     },
   ];
   return (
-    <div className="max-w-screen-2xl container mx-auto px-4 md:px-20 my-16">
+    <div
+      name="Experiance"
+      className="max-w-screen-2xl container mx-auto px-4 md:px-20 my-16"
+    >
       <div>
         <h1 className="text-3xl font-bold mb-5">Experience</h1>
         <p className="">

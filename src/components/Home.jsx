@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaSquareInstagram } from "react-icons/fa6";
@@ -8,20 +9,28 @@ import { SiExpress } from "react-icons/si";
 import { RiReactjsLine } from "react-icons/ri";
 import { FaNodeJs } from "react-icons/fa";
 import { ReactTyped } from "react-typed";
-import pic from "../../public/photo.avif";
+import pic from "../../public/AnupamImage.png";
 
 const Home = () => {
   return (
     <>
-      <div className="max-w-screen-2xl container mx-auto px-4 md:px-20 my-20">
+      <div
+        id="1"
+        name="Home"
+        className="max-w-screen-2xl container mx-auto px-4 md:px-20 my-20"
+      >
         <div className="flex flex-col md:flex-row">
-          <div className="md:w-1/2 mt-12 md:mt-24 space-y-2 order-2 md:order-1">
+          <motion.div
+            className="md:w-1/2 mt-12 md:mt-24 space-y-2 order-2 md:order-1"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
             <span className="text-xl">Welcome In My Feed</span>
             <div className="flex space-x-1 text-2xl md:text-4xl">
-              <h1>hello I'm a </h1>
-              {/*<span className="text-red-700 font-bold">Developer</span>*/}
+              <h1>Hello, I'm a </h1>
               <ReactTyped
-                className="text-red-700 font-bold"
+                className="text-gray-600 font-bold"
                 strings={["Developer", "Programmer"]}
                 typeSpeed={50}
                 loop={true}
@@ -29,26 +38,24 @@ const Home = () => {
             </div>
             <br />
             <p className="text-sm md:text-md text-justify">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga ab
-              hic laboriosam sapiente possimus. Est, modi repudiandae non quos
-              alias quisquam quo esse. Adipisci minus accusantium quasi nesciunt
-              numquam aliquid eveniet facere beatae error hic non reiciendis
-              dolores atque laborum dolorum tempora debitis earum quaerat
-              obcaecati, cum vel excepturi ipsa!
+              My portfolio aims to present my skills, expertise, and
+              professional journey in a concise and professional manner. With a
+              Bachelor of Engineering in Computer Science from Acropolis
+              Institute of Technology and Research, I have honed my proficiency
+              in Python, PHP, JavaScript, HTML, CSS, Tailwind CSS, Node.js,
+              React, MongoDB, and Express, alongside experience in SQL and a
+              strong grasp of design principles and problem-solving skills.
             </p>
             <br />
-            {/*social */}
             <div className="flex flex-col items-center md:flex-row justify-between space-y-6 md:space-y-0">
               <div className="space-y-2 ">
                 <h1 className=" text-center font-bold">Available On</h1>
-
                 <ul className="flex space-x-5">
                   <li>
                     <a href="https://www.facebook.com/" target="blank">
                       <FaLinkedin className="text-2xl cursor-pointer" />
                     </a>
                   </li>
-
                   <li>
                     <FaSkype className="text-2xl cursor-pointer" />
                   </li>
@@ -62,35 +69,59 @@ const Home = () => {
               </div>
               <div className="space-y-2">
                 <h1 className=" text-center font-bold">Currently Working On</h1>
-
                 <ul className="flex space-x-5">
                   <li>
-                    <DiMongodb className="ml-2.5 md:ml-0 text-3xl md:text-2xl hover:scale-110 duration-200 rounded-full" />
+                    <motion.div
+                      whileHover={{ scale: 1.2 }}
+                      whileTap={{ scale: 0.8 }}
+                    >
+                      <DiMongodb className="ml-2.5 md:ml-0 text-3xl md:text-2xl rounded-full" />
+                    </motion.div>
                   </li>
                   <li>
-                    <SiExpress className="text-xl md:text-2xl hover:scale-110 duration-200 rounded-full" />
+                    <motion.div
+                      whileHover={{ scale: 1.2 }}
+                      whileTap={{ scale: 0.8 }}
+                    >
+                      <SiExpress className="text-xl md:text-2xl rounded-full" />
+                    </motion.div>
                   </li>
                   <li>
-                    <RiReactjsLine className="text-xl md:text-2xl hover:scale-110 duration-200 rounded-full" />
+                    <motion.div
+                      whileHover={{ scale: 1.2 }}
+                      whileTap={{ scale: 0.8 }}
+                    >
+                      <RiReactjsLine className="text-xl md:text-2xl rounded-full" />
+                    </motion.div>
                   </li>
                   <li>
-                    <FaNodeJs className="text-xl md:text-2xl hover:scale-110 duration-200 rounded-full" />
+                    <motion.div
+                      whileHover={{ scale: 1.2 }}
+                      whileTap={{ scale: 0.8 }}
+                    >
+                      <FaNodeJs className="text-xl md:text-2xl rounded-full" />
+                    </motion.div>
                   </li>
                 </ul>
               </div>
             </div>
-          </div>
-          <div className="md:w-1/2 md:ml-48 md:mt-16 mt-8 order-1">
-            <img
+          </motion.div>
+          <motion.div
+            className="md:w-1/2 md:ml-48 md:mt-16 mt-8 order-1"
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <motion.img
               src={pic}
-              className="rounded-full md:h-[450px] md:w-[450px]"
+              className="rounded-full md:h-[450px] md:w-[550px]"
               alt=""
+              whileHover={{ scale: 1.1 }}
             />
-          </div>
+          </motion.div>
         </div>
       </div>
-      <hr style={{ border: '1px solid black' }} />
-      
+      <hr />
     </>
   );
 };
