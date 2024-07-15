@@ -52,7 +52,7 @@ const Home = () => {
                 <h1 className=" text-center font-bold">Available On</h1>
                 <ul className="flex space-x-5">
                   <li>
-                    <a href="https://www.facebook.com/" target="blank">
+                    <a href="http://www.linkedin.com/in/anupamjain08" target="blank">
                       <FaLinkedin className="text-2xl cursor-pointer" />
                     </a>
                   </li>

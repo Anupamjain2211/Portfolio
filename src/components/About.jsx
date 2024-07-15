@@ -40,7 +40,7 @@ const About = () => {
           Professional Experience
         </h1>
         <span>
-          MERN Stack Intern, Zappian Media, March 2024 - Present Currently
+          MERN Stack Intern, Zappian Media, January 2024 - Present Currently
           involved in building an email ESP as part of the MERN stack internship
           role at Zappian Media.
           <br />
